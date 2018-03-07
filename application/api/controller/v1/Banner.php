@@ -36,11 +36,12 @@ class Banner
     {
         $validate = new IDMustBePositiveInt();
         $validate->goCheck();
-        $banner = BannerModel::getBannerById($id);
+      $banner=BannerModel::with(['items','items.img'])->find($id);
+//        $banner = BannerModel::getBannerById($id);
         if (!$banner) {
           throw new BannerMissException();
         }
-        return json($banner);
+        return $banner;
 
     }
 }
