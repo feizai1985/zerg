@@ -11,3 +11,5 @@
 
  use think\Route;
 Route::get('api/v1/banner/:id','api/v1.Banner/getBanner');
+Route::get('api/v1/theme','api/v1.Theme/getSimpleList');
+Route::get('api/v1/theme/:id','api/v1.Theme/getComplexOne');
