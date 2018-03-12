@@ -20,4 +20,17 @@ protected $hidden=[
     'category_id',
     'create_time'
 ];
+
+public function getMainImgUrlAttr($value,$data){
+    return $this->prefixImgUrl($value,$data);
+}
+
+  public static function getMostRecent($count){
+    $prducts=self::limit($count)->order('create_time desc')->select();
+    return $prducts;
+  }
+  public static function getAllInCategory($id){
+    $products=self::where('category_id','=',$id)->select();
+    return $products;
+  }
 }

@@ -13,3 +13,6 @@
 Route::get('api/v1/banner/:id','api/v1.Banner/getBanner');
 Route::get('api/v1/theme','api/v1.Theme/getSimpleList');
 Route::get('api/v1/theme/:id','api/v1.Theme/getComplexOne');
+Route::get('api/v1/product/recent/','api/v1.Product/getRecent');
+Route::get('api/v1/product/by_category','api/v1.Product/getAllInCategory');
+Route::get('api/v1/category/all','api/v1.Category/getAllCategorys');
