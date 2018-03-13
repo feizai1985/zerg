@@ -9,5 +9,6 @@
 
 
  return [
-     'img_prefix'=>'http:/f.cn/images'
+     'img_prefix'=>'http:/f.cn/images',
+     'token_expire_in'=>7200
  ];
